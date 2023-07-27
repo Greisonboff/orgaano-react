@@ -14,3 +14,14 @@
     padding: 24px;
     box-sizing: border-box;
 }
+
+@media (max-width: 480px) {
+    .lista-suspensa label {
+        font-size: 16px;
+    }
+
+    .lista-suspensa select {
+        font-size: 14px;
+        padding: 14px;
+    }
+}
