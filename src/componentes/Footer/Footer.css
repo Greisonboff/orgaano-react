@@ -1,0 +1,23 @@
+footer {
+    height: 213px;
+    background: #6278F7;
+    background-image: url("../../../public/imagens/imagens/fundo.png");
+    display: grid;
+}
+
+footer .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social img {
+    width: 20px;
+    height: 20px;
+    padding: 25px;
+}
+
+footer p {
+    color: white;
+    font-size: 20px;
+}
