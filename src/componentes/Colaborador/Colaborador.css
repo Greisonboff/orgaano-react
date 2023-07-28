@@ -1,5 +1,6 @@
 .colaborador {
     width: 280px;
+    margin: 5px;
 }
 
 .colaborador .cabecalho {
@@ -37,9 +38,29 @@
     padding: 0 16px;
 }
 
+@media (max-width: 665px) {
+    .colaborador {
+        width: 230px;
+    }
+
+    .colaborador img {
+        width: 85px;
+    }
+
+    .colaborador .rodape {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+
+    .colaborador .rodape h4,
+    .colaborador .rodape h5 {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 480px) {
     .colaborador {
-        width: 180px;
+        width: 150px;
     }
 
     .colaborador img {
