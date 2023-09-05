@@ -25,6 +25,12 @@
     }
 }
 
+@media (max-width: 800px) {
+    .formaulario {
+        margin: 30px 50px;
+    }
+}
+
 @media (max-width: 480px) {
     .formaulario h2 {
         font-size: 18px;
