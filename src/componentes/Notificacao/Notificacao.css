@@ -1,0 +1,51 @@
+div.notification,
+div.notificationColaborador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        /* Opacidade inicial */
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        /* Opacidade ao chegar a 100% da animação */
+    }
+}
+
+.notification p,
+.notificationColaborador p {
+    opacity: 0;
+    position: absolute;
+    font-weight: 700;
+}
+
+.active_erro {
+    color: red;
+    animation: fadeOut 5s;
+}
+
+.notificationColaborador {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.active_valid {
+    color: green;
+    animation: fadeOut 5s;
+}
+
+@media (max-width: 480px) {
+    .notification p,
+    .notificationColaborador p {
+        font-size: 12px;
+    }
+}
