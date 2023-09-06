@@ -1,5 +1,6 @@
 **Desktop version**
 ![Projeto Organo](https://github.com/Greisonboff/organo-react/blob/main/public/organo-em-react.vercel.app_.png?raw=true)
+***
 **Mobile version**
 ![Projeto Organo](https://github.com/Greisonboff/organo-react/blob/main/public/organo-em-react.vercel.app_(iPhone%20SE).png?raw=true)
 
