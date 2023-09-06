@@ -1,3 +1,5 @@
+![Texto alternativo da imagem]([URL_da_imagem](https://github.com/Greisonboff/organo-react/blob/main/public/organo-em-react.vercel.app_.png?raw=true))
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
