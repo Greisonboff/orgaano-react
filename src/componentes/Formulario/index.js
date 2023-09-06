@@ -27,7 +27,6 @@ export default function Formulario(props) {
     }
 
     const setMsgColaborador = (err, msg) => {
-        console.log(msg)
         // Mostra o texto recebido por props
         setcolaboradorNotificacaoText(msg);
         setcolaboradorNotificacaoClass(`active_${err}`)
@@ -50,7 +49,6 @@ export default function Formulario(props) {
     const favorito = false;
 
     const aoSalvar = (event) => {
-        console.log(props)
         event.preventDefault()
         props.aoColaboradorCadestrado({ nome, id, cargo, imagem, time, idTime, favorito })
         setNome('')

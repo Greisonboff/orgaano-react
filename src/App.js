@@ -6,10 +6,11 @@ import Footer from './componentes/Footer';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
+  const colaboradorSalvo = JSON.parse(localStorage.getItem('colaboradoresSalvos')) || [];
+  const timeSalvo = JSON.parse(localStorage.getItem('timeSalvo')) || [];
+  const [colaboradores, setColaboradores] = useState(colaboradorSalvo)
 
-  const [colaboradores, setColaboradores] = useState([])
-
-  const [times, setTimes] = useState([
+  const timesFixo = [
     {
       id: uuidv4(),
       nome: 'Programação',
@@ -45,33 +46,44 @@ function App() {
       nome: 'Inovação e Gestão',
       cor: '#FF8A29',
     }
-  ]);
+  ]
+  const [times, setTimes] = useState(timeSalvo.length ? timeSalvo : timesFixo);
+
+  const saveColaborador = (e)=>{
+    localStorage.setItem('colaboradoresSalvos',JSON.stringify(e));
+  }
+
+  const saveTime = (e)=>{
+    localStorage.setItem('timeSalvo',JSON.stringify(e));
+  }
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador])
+    saveColaborador([...colaboradores, colaborador])
   }
 
   function mudarCorTime(cor, id) {
     setTimes(times.map(time => {
-      console.log(id)
       if (time.id === id) {
         time.cor = cor;
       }
       return time;
     }))
+    saveTime(times)
   }
 
   function deletarColaborador(id) {
-    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
-    console.log('teste')
-    console.log(id)
-    console.log(colaboradores)
+    var newColaboradores = colaboradores.filter(colaborador => colaborador.id !== id)
+    setColaboradores(newColaboradores)
+    saveColaborador(newColaboradores)
   }
 
   function cadastraTime(novoTime) {
     var timeValido = times.filter(time => time.nome === novoTime.nome)
     if (timeValido.length === 0) {
-      setTimes([...times, { ...novoTime, id: uuidv4() }])
+      var newTimes = [...times, { ...novoTime, id: uuidv4() }]
+      setTimes(newTimes)
+      saveTime(newTimes)
       novoTime.activeMsg('valid','Time cadastrado com sucesso')
     }else{
       novoTime.activeMsg('erro','Time já cadastrado')
@@ -85,6 +97,7 @@ function App() {
       }
       return colaborador;
     }))
+    saveColaborador(colaboradores)
   }
 
   return (
