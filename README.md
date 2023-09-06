@@ -1,3 +1,7 @@
+# Organo React
+
+Organo is a registration system for a development team, a web application developed in React.
+_ _ _
 **Desktop version**
 ![Projeto Organo](https://github.com/Greisonboff/organo-react/blob/main/public/organo-em-react.vercel.app_.png?raw=true)
 _ _ _
